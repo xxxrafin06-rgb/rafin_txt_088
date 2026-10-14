@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: rafin-ff-bot
+    runtime: docker
+    plan: starter
+    region: singapore
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: TZ
+        value: "Asia/Dhaka"
+      - key: PORT
+        value: "10000"
+      - key: FF_UID
+        value: "8240708002"
+      - key: FF_PW
+        value: "048CDA2F8FEEB4D8B641F16BEFC789DB8B556681EFA6BB0635DF6BC71883F7CB"
+      - key: FF_REGION
+        value: "IND"
+      - key: FF_TOKEN
+        value: ""
+    autoDeploy: true
+    healthCheckPath: /health

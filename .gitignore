@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+.env
+token.txt
+spam_targets.json
+*.log
+.vscode/
+.idea/
+.DS_Store
